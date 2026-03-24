@@ -2,20 +2,12 @@ package CollectionFramewor;
 
 import java.util.Comparator;
 
-public class MyComparator implements Comparator {
+public class MyComparator implements Comparator<String> {
 
 	@Override
-	public int compare(Object obj1, Object obj2) {
-		Integer I1 = (Integer) obj1;
-		Integer I2 = (Integer) obj2;
-
-		if (I1 < I2) {
-			return +1;
-		} else if (I1 > I2) {
-			return -1;
-		} else {
-			return 0;
-		}
-	}
-
+	public int compare(String o1, String o2) {
+		 String s1 = o1.toString();
+		 String s2 = (String)o2;
+		 return s2.compareTo(s1);
+	}	
 }
