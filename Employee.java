@@ -1,30 +1,18 @@
-package CollectionFramewor;
+package java8;
 
-public class Employee implements Comparable<Object>{
+public class Employee {
 
+	public int id;
 	public String name;
-	public int eid;
-
-	public Employee(String name, int eid) {
+	public String email;
+	public double salary;
+	public String address;
+	
+	public Employee(int id, String name, String email, double salary, String address) {
+		this.id = id;
 		this.name = name;
-		this.eid = eid;
-	}
-
-	public String toString() {
-		return name + "--" + eid;
-	}
-
-	public int compareTo(Object obj) {
-		int eid1 = this.eid;
-		Employee e = (Employee) obj;
-		int eid2 = e.eid;
-
-		if (eid1 < eid2) {
-			return -1;
-		} else if (eid1 > eid2) {
-			return +1;
-		} else {
-			return 0;
-		}
+		this.email = email;
+		this.salary = salary;
+		this.address = address;
 	}
 }
