@@ -1,18 +1,43 @@
-package java8;
+package RevisionCodes;
 
 public class Employee {
 
-	public int id;
-	public String name;
-	public String email;
-	public double salary;
-	public String address;
+	int empid;
+	String ename;
+	double salary;
 	
-	public Employee(int id, String name, String email, double salary, String address) {
-		this.id = id;
-		this.name = name;
-		this.email = email;
+	public Employee(int empid, String ename, double salary) {
+		this.empid = empid;
+		this.ename = ename;
 		this.salary = salary;
-		this.address = address;
+	}
+
+	public int getEmpid() {
+		return empid;
+	}
+
+	public void setEmpid(int empid) {
+		this.empid = empid;
+	}
+
+	public String getEname() {
+		return ename;
+	}
+
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empid=" + empid + ", ename=" + ename + ", salary=" + salary + "]";
 	}
 }
